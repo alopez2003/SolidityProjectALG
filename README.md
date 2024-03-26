@@ -107,7 +107,91 @@ _Fin de Fase 1_
 
 Utilizando el mismo punto de Hardhat, lo que vamos a hacer es inicializar un token llamado Chilango, esto como un Memecoin sólo para despliegue de un contato. Sólo por referencia, se les dice Chilangos a la gente de vivimos en Ciudad de México. Usualmente el término Chilango es denominado a la gente que es foranea a Ciudad de México y se va a vivir a Ciudad de México, sin embargo hoy en día, cualquiera que viva en Ciudad de México se le denomina Chilango.
 
+Lo primero que hacemos es verificamos que tengamos los contratos en la carpeta "contracts", estos archivos estarán disponibles en la Fase 2 de este Github. Nos referimos a los contratos ico.sol y dex.sol.
 
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/a1d95fed-efa8-4783-8693-d02d49cd3166)
+
+Posteriormente hacemos un clean (npx hardhat clean) y un compile (npx hardhat compile) para ver que todo esté bien.
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/1650fe71-c677-46d4-889a-f77cf79e04ff)
+
+Y posteriormente desplegamos.
+
+En el caso de la Initial Coin Offering para el token CHIL sera con el archivo deployico.ts
+
+Vemos que se ha desplegado con el contrato: 0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6 hace unos pocos segundos
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/5666b6e3-5986-404c-a1eb-dab5d8292f9a)
+
+URL del contrato: https://testnet.bscscan.com/address/0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6
+
+Si vemos el código está aún en bytecode, por lo que es necesario verificarlo
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/3c8d4fb7-f0cc-4d2e-87b2-0d10bc9b0760)
+
+Ejecutamos el comando "npx hardhat verify --network binance_bsc_testnet 0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6" y satisfactoriamente verifica el contrato, ya no se ve en bytecode
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/7e6e724d-991e-4a5f-8fe6-235f4592963a)
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/2abf0d62-7244-41fe-9e42-6eca8617d523)
+
+Podemos ver el código e interactuar con él en la siguiente liga:
+
+https://testnet.bscscan.com/address/0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6#code
+
+Consultamos el balance del token CHIL en la cuenta
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/f3087623-e2f5-4608-be55-344157b1c7c4)
+
+Y también importamos el token en MetaMask para poder ser visualizado
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/5e8dbe15-8309-4200-a6c6-bc0f6bbe33a8)
+
+Y vemos que tenemos 10,000,000 de tokens CHIL
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/67727b52-c7fb-4741-88cc-9bd7290cddfd)
+
+Ahora vamos a incrementar otro millon de tokens, entonces lo que hacemos es calcular esto en Gweis y nos dará lo siguiente:
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ad1794e0-6603-4453-952c-14aafff28667)
+
+Será lo que establezcamos en la función del contrato conectado a nuestro MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/4957bc3b-6130-477f-9a9d-597c9662758d)
+
+Nos pide confirmación en MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/d484dbf5-9e27-4bb7-a6ff-0ccbd99bad9f)
+
+Y podemos ver que la transacción se ejecutó hace unos segundos:
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/f3a89813-42f1-4e07-95be-70dab8ab7219)
+
+Se anexa URL de la transacción
+
+https://testnet.bscscan.com/tx/0x9e26f2bd1cc1f96db51c9316783a6720b42fabb5de97d105e7aac62b59905458
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
