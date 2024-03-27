@@ -117,6 +117,8 @@ Posteriormente hacemos un clean (npx hardhat clean) y un compile (npx hardhat co
 
 Y posteriormente desplegamos.
 
+### Initial Coin Offering
+
 En el caso de la Initial Coin Offering para el token CHIL sera con el archivo deployico.ts
 
 Vemos que se ha desplegado con el contrato: 0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6 hace unos pocos segundos
@@ -174,6 +176,8 @@ https://testnet.bscscan.com/tx/0x9e26f2bd1cc1f96db51c9316783a6720b42fabb5de97d10
 Por error puse Wei's en lugar de Gwei's y me salió una cantidad muy fuerte, pero a fines de ejemplo pudimos ver como se minteaban nuevos tokens
 
 ![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/5c8fab29-cc8b-4b3c-a7fa-884df65b43fc)
+
+### Descentralized Exchange
 
 Ahora vamos a desplegar un contrato inteligente que nos permita hacer las ventas de estos tokens CHILL en un tipo Descentralized Exchange (DEX), por lo que haremos deploy del contrato dex.sol
 
@@ -283,7 +287,147 @@ En verdad, me parece que la quema de tokens es algo muy interesante, en este cas
 _Fin de la Fase 2._
 
 
-## Fase 3
+## Fase 3: Desarrollar y desplegar 2 Smart Contracts base de NFTs, implementando el estándar ERC-721 y el ERC-1155. 
+
+Esta fase, derivada del Sprint 3, se desplegará en Hardhat puesto que me parece que ya tengo el conocimiento de como desplegar los contratos y sobre todo verificarlos.
+
+Primero comencemos verificando que tenemos los contratos y los scripts de ejecución para desplegarlos.
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/a14f5c8d-c07f-4513-9750-67e2cbec0b42)
+
+### My NFT
+
+Comencemos con el despliegue del contrato MyNFT, que nos permitirá acuñar nuestro primer NFT
+
+Para eso hacemos un "npx hardhat clean" y un "npx hardhat compile" de inicio, tuvo algunos warnings, pero aún así compilamos
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/e5d1f32c-9cb1-4de1-8b52-d007858eed3b)
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/80bb4fb4-86ea-4156-b6f2-cf93d7872d40)
+
+Comencemos con el despliegue de MyNFT.sol
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/9915def0-b359-46ea-a401-521b15ba88dd)
+
+Vemos que se despliega en el contrato 0xFde1850bEDEa42da1755131cD13eC342dd678c7d y que fue desplegado hace unos cuantos segundos
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/9f084599-b324-40c9-8ca5-ebefa4823da7)
+
+URL del Contrato
+https://testnet.bscscan.com/address/0xFde1850bEDEa42da1755131cD13eC342dd678c7d
+
+Vemos que el contrato está en bytecode, por lo que procedemos a verificarlo
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/60487cdc-7bab-4155-afd8-46266e0da6fb)
+
+Ejecutamos "npx hardhat verify --network binance_bsc_testnet 0xFde1850bEDEa42da1755131cD13eC342dd678c7d
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/9f427932-7038-4250-8f69-383fd038317f)
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/6a8f891f-7844-49af-9398-5b0bb2ee9ee8)
+
+Podemos ver que ahora el contrato está verificado y disponible para uso de sus funciones de lectura y escritura
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/4340d4a1-e5ac-43c7-9c03-3cc28dea276d)
+
+Liga al Codigo del contrato
+https://testnet.bscscan.com/address/0xFde1850bEDEa42da1755131cD13eC342dd678c7d#code
+
+Lo que hacemos primero es mintear un primer NFT con la función de escritura "awardItem" conectando MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ecb18340-c9cd-4045-8a45-0d4d0ce221d0)
+
+Nos pide confirmación en MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/d3822757-7d9d-48a9-a822-d6946d4dbf4f)
+
+Y vemos que la transacción ha sido ejecutada hace unos pocos segundos
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/845b9bfa-281b-42c6-8352-4416a9da1ab3)
+
+URL de la transaccion
+https://testnet.bscscan.com/tx/0xb7385a833d4a6182e7ffa90d2862026c7b7feb2d4924d89c25600d83fb57ef82
+
+Podemos ver ahora en las funciones de lectura que fue minteado el tokenURI CHILANGO1 con tokenId 0 hacia mi address 0xC3ae535bd149b7B69BF17bab03F9F5733C779A36
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ddbe9248-b8ef-4f73-ad9d-5c5940f5244f)
+
+### Marketplace
+
+Ahora despleguemos el contrato inteligente de NFTMarketplace.sol, para esto tuvimos que editar el archivo de despliegue estableciendo la dirección del contrato del minteo de NFT's
+
+Realizamos el despliegue del script
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/161d575a-0788-43be-b986-faee46f0d196)
+
+Vemos que se desplego hacia el contrato hace unos pocos segundos
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/bc416711-d8d4-421e-a303-b210871ca412)
+
+URL del contrato
+https://testnet.bscscan.com/address/0xbe09536578A6CEa7320DC35C70D79883c7042C14
+
+Verificamos el contrato y podemos ver que ya fue verificado
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/cb165a45-258e-4683-9437-538137a32729)
+
+Podemos interactuar ya con las funciones del contrato
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/aad06733-e86d-4c6e-b447-bab705fa8cae)
+
+URL del código del contrato
+https://testnet.bscscan.com/address/0xbe09536578A6CEa7320DC35C70D79883c7042C14#code
+
+Lo primero que haremos es poner en venta el NFT con tokenID 0 en 10,000,000 Gweis
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/2a59baa5-fc6d-41f6-aee8-191e8ec63249)
+
+Nos pide confirmación de MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/e9393e68-9b2b-4b2d-b5a4-705ebd3092f5)
+
+y se queda en pending, me parece que esto es por la forma en la que se desplegó el contrato, en un inicio tuve un error y el deploy de MyNFT lo hice con MarketPlace, por lo que lo hice con la dirección de mi address, puesto que no tenía una dirección de un SmartContract de minteo de nuevos NFT's, lo que haré es deplegar este contrato en conjunto con un ERC-20 en una nueva cuenta para dar pase a la Fase 4 y con esto comprobar la Fase 3, pero podemos ver que el contrato fue desplegado con éxito.
+
+Preguntas de Reflexión
+
+**¿Qué caso de uso pretende resolver tu caso de uso basado en criptomonedas y NFT?**
+Tal cual fue en la Fase 2, esto vino de una Memecoin la cual tiene NFT's que pueden ser intercambiadas, vendidas y compradas, mismas que deben tener una aprobación por parte de una address o addresses específicas.
+
+**¿Qué valor añadido puede aportar sobre otros proyectos existentes?**
+Realmente, al ser una NFT de Memecoin, el valor realmente es el intercambio de un token no fungible que puede ser coleccionable esperando en un futuro pueda ser rentable.
+
+**¿Cómo crees que puede mejorarse técnicamente?**
+Desde luego que de muchas formas, de inicio, tal cual como la fase 2, no existe un burn, pero también en este caso, tuve un error de despliegue, mismo que pretendo arreglar en la Fase 4, desplegando el contrato de ICO, DEX, MyNFT y NFTMarketplace en otra cuenta para ligar ICO con NFTMarketplace.
+
+_Fin de la Fase 3._
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
