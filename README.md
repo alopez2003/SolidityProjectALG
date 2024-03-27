@@ -232,6 +232,68 @@ Y podemos ver que fue ejecutado
 Dirección de transacción
 https://testnet.bscscan.com/tx/0x02a89755bb723964d2e9b4dded9d78b12a368a8c91a62800b8bc2a00794716df
 
+Podemos ver que ahora el contrato tiene 1,000,000 de tokens de CHIL
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/f5baf1a9-7e54-4383-88d6-ce56c8f27b3d)
+
+Ahora vamos a ejecutar la función de compra "buy" de 0.01 BNB
+
+Me pide confirmación en MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/dd7a936e-08e4-45da-a127-12f9505bf761)
+
+Y puedo ver que con eso pude comprar un token de CHIL
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/fb53f5a8-dbe2-4512-80f5-ab9ff3812c26)
+
+Se anexa URL de la transacción
+
+https://testnet.bscscan.com/tx/0xe65197d3a522a406c6c7e6efe53114faa121f4c03d280c18fd92c2cb966500de
+
+Y ahora probamos la función de venta "sell" derivado de la función del ICO "approve" por 500,000 Gwei de CHIL
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/e94cf156-6f0b-4e5b-b81a-e0ae16d3f659)
+
+Nos pide confirmación en MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/e5d831f1-c31d-4511-acc2-5c298d3f700c)
+
+Y listo, vemos que fue ejecutada la función hace poco tiempo
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/29da9d74-ffa7-4c9f-bb2c-de31fafc133a)
+
+URL de la transacción
+
+https://testnet.bscscan.com/tx/0x4440c1324f352ce996c3238ff38e78e603b5af33079ac0c4b357f90ab233dc68
+
+
+Preguntas de Reflexión:
+
+¿Qué caso de uso pretende resolver tu criptomoneda y el resto de Smart Contracts programados?
+Realmente está pensada como una memecoin, que si a bien en este momento están en auge, puesto que en mercado alcista, las personas se dejan llevar por emociones, sin decir que les gusta comprar cualquier tipo de moneda, y en específico una memecoin que tiene logos atractivos. Pero con esto, este tipo de tokens pueden ser minteados sin un limite de supply chain (que es lo que permite resolver el contrato ico.sol), por lo que se pueden mintear cuantos tokens se quieran de este tipo de monedas, y así mismo pueden ser intercambiados, ya sea en compra o venta y muchas veces esto es hecho en un exchange descentralizado, por lo que el smart contract dex, permite comercializar este tipo de tokens.
+Algo interesante de este contrato (dex.sol) es que permite vender si y solo si está aprobada la dirección a la que se va a vender y por una cantidad fija, por lo que no cualquiera podría emitir un contrato de venta. Esto añade una capa de seguridad al smart contract para que no cualquiera pueda ejecutar esta función, a menos de que esté autorizado a realizarlo.
+
+¿Qué valor añadido aporta esta criptomoneda, y el resto de Smart Contracts programados, a otros casos similares existentes?
+Es muy común el ver este tipo de criptomonedas, y realmente no existe una utilidad de la misma que no sea el poseer tokens de esta índole, sin embargo su comportamiento es igual al resto de las criptomonedas en el aspecto de la comercialización (compra/venta), por lo que es necesario tener contratos que permitan estos pasos.
+
+¿Cómo crees que puede mejorarse técnicamente?
+En verdad, me parece que la quema de tokens es algo muy interesante, en este caso no está programada, y aunque si es posible hacerlo, no se programó. Otra cosa, no como mejora, sino como autoreflexión y derivado del sprint 3, es que no había aprendido como verificar los contratos por medio de hardhat, y realmente es mucho más sencillo que con Remix, por tanto este es un punto adicional de porque ocupar Hardhat como compilador, es muy eficiente.
+
+
+_Fin de la Fase 2._
+
+
+## Fase 3
+
+
+
+
+
+
+
+
+
+
 
 
 
