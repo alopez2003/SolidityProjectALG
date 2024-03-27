@@ -177,6 +177,77 @@ Por error puse Wei's en lugar de Gwei's y me salió una cantidad muy fuerte, per
 
 Ahora vamos a desplegar un contrato inteligente que nos permita hacer las ventas de estos tokens CHILL en un tipo Descentralized Exchange (DEX), por lo que haremos deploy del contrato dex.sol
 
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/c92b6db4-fe63-43e9-9952-7d0d2a213843)
+
+Vemos que se desplegó en el contrato 0xae503eb22eA6F5415B60Ebb39eaeC5606caF72A5 y que se creó aproximadamente hace un minuto
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ff08c0c1-d85a-44e7-a4f3-f017b749d5c9)
+
+Dirección URL del contrato
+
+https://testnet.bscscan.com/address/0xae503eb22eA6F5415B60Ebb39eaeC5606caF72A5
+
+Ahora verificamos el código con "npx hardhat verify --network binance_bsc_testnet 0xae503eb22eA6F5415B60Ebb39eaeC5606caF72A5 "0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6" y podemos ver que fue satisfactorio
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/b69730bc-6610-4563-964a-a983df328e9b)
+
+Ahora ya podemos ver el código verificado e interactuar con las funciones
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/fd4dca18-2faf-4393-8c6c-466cd613f733)
+
+Liga del codigo del contrato y sus funciones
+
+https://testnet.bscscan.com/address/0xae503eb22eA6F5415B60Ebb39eaeC5606caF72A5#code
+
+Ahora lo primero es poner en venta unos CHIL, pero para esto primero debemos aprobar el contrato dex en nuestro contrato ico, para que pueda ser utilizado, para esto regresamos al smart contract ico y en la función de escritura approve vamos a colocar la dirección del smart contract 0xae503eb22eA6F5415B60Ebb39eaeC5606caF72A5 por un monto de 1,000,000 de CHIL, por lo que hacemos la conversión en eth-converter.com
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/4e7ae2fd-e76b-4b25-8edb-324f524cf696)
+
+
+Pide confirmación de Metamask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/b99414e5-02dd-42b4-8d2c-a8b6aae1e154)
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ca5298d9-3caf-42d6-a2f7-56b57a3864fd)
+
+Y vemos que fue aprobada
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/8717c5ec-485b-4540-bf98-e1fb81c602ac)
+
+URL de la transacción
+https://testnet.bscscan.com/tx/0x0503aa2654812677affbcae9e1f3e6541090b098e5e8ff8e80ac5ccdc1ab300f
+
+Ahora vamos a transferir el 1,000,000 de tokens al contrato desde nuestro MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/0c825473-62cb-448a-b51a-58c846ad17d4)
+
+Pide confirmación
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/8e459f67-6792-4cd0-ac6e-d789ced30683)
+
+Y podemos ver que fue ejecutado
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/f8d63bdc-4a11-4c6b-8d26-74d05accf7be)
+
+Dirección de transacción
+https://testnet.bscscan.com/tx/0x02a89755bb723964d2e9b4dded9d78b12a368a8c91a62800b8bc2a00794716df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
