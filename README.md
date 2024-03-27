@@ -353,6 +353,53 @@ Podemos ver ahora en las funciones de lectura que fue minteado el tokenURI CHILA
 
 ### Marketplace
 
+Ahora despleguemos el contrato inteligente de NFTMarketplace.sol, para esto tuvimos que editar el archivo de despliegue estableciendo la dirección del contrato del minteo de NFT's
+
+Realizamos el despliegue del script
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/161d575a-0788-43be-b986-faee46f0d196)
+
+Vemos que se desplego hacia el contrato hace unos pocos segundos
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/bc416711-d8d4-421e-a303-b210871ca412)
+
+URL del contrato
+https://testnet.bscscan.com/address/0xbe09536578A6CEa7320DC35C70D79883c7042C14
+
+Verificamos el contrato y podemos ver que ya fue verificado
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/cb165a45-258e-4683-9437-538137a32729)
+
+Podemos interactuar ya con las funciones del contrato
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/aad06733-e86d-4c6e-b447-bab705fa8cae)
+
+URL del código del contrato
+https://testnet.bscscan.com/address/0xbe09536578A6CEa7320DC35C70D79883c7042C14#code
+
+Lo primero que haremos es poner en venta el NFT con tokenID 0 en 10,000,000 Gweis
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/2a59baa5-fc6d-41f6-aee8-191e8ec63249)
+
+Nos pide confirmación de MetaMask
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/e9393e68-9b2b-4b2d-b5a4-705ebd3092f5)
+
+y se queda en pending, me parece que esto es por la forma en la que se desplegó el contrato, en un inicio tuve un error y el deploy de MyNFT lo hice con MarketPlace, por lo que lo hice con la dirección de mi address, puesto que no tenía una dirección de un SmartContract de minteo de nuevos NFT's, lo que haré es deplegar este contrato en conjunto con un ERC-20 en una nueva cuenta para dar pase a la Fase 4 y con esto comprobar la Fase 3, pero podemos ver que el contrato fue desplegado con éxito.
+
+Preguntas de Reflexión
+
+**¿Qué caso de uso pretende resolver tu caso de uso basado en criptomonedas y NFT?**
+Tal cual fue en la Fase 2, esto vino de una Memecoin la cual tiene NFT's que pueden ser intercambiadas, vendidas y compradas, mismas que deben tener una aprobación por parte de una address o addresses específicas.
+
+**¿Qué valor añadido puede aportar sobre otros proyectos existentes?**
+Realmente, al ser una NFT de Memecoin, el valor realmente es el intercambio de un token no fungible que puede ser coleccionable esperando en un futuro pueda ser rentable.
+
+**¿Cómo crees que puede mejorarse técnicamente?**
+Desde luego que de muchas formas, de inicio, tal cual como la fase 2, no existe un burn, pero también en este caso, tuve un error de despliegue, mismo que pretendo arreglar en la Fase 4, desplegando el contrato de ICO, DEX, MyNFT y NFTMarketplace en otra cuenta para ligar ICO con NFTMarketplace.
+
+_Fin de la Fase 3._
+
 
 
 
