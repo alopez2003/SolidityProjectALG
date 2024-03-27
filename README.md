@@ -117,6 +117,8 @@ Posteriormente hacemos un clean (npx hardhat clean) y un compile (npx hardhat co
 
 Y posteriormente desplegamos.
 
+### Initial Coin Offering
+
 En el caso de la Initial Coin Offering para el token CHIL sera con el archivo deployico.ts
 
 Vemos que se ha desplegado con el contrato: 0x8b74E88C04CC2866f95DA7EEBfAAB74e1010dDD6 hace unos pocos segundos
@@ -174,6 +176,8 @@ https://testnet.bscscan.com/tx/0x9e26f2bd1cc1f96db51c9316783a6720b42fabb5de97d10
 Por error puse Wei's en lugar de Gwei's y me salió una cantidad muy fuerte, pero a fines de ejemplo pudimos ver como se minteaban nuevos tokens
 
 ![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/5c8fab29-cc8b-4b3c-a7fa-884df65b43fc)
+
+### Descentralized Exchange
 
 Ahora vamos a desplegar un contrato inteligente que nos permita hacer las ventas de estos tokens CHILL en un tipo Descentralized Exchange (DEX), por lo que haremos deploy del contrato dex.sol
 
@@ -291,6 +295,8 @@ Primero comencemos verificando que tenemos los contratos y los scripts de ejecuc
 
 ![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/a14f5c8d-c07f-4513-9750-67e2cbec0b42)
 
+### My NFT
+
 Comencemos con el despliegue del contrato MyNFT, que nos permitirá acuñar nuestro primer NFT
 
 Para eso hacemos un "npx hardhat clean" y un "npx hardhat compile" de inicio, tuvo algunos warnings, pero aún así compilamos
@@ -345,7 +351,7 @@ Podemos ver ahora en las funciones de lectura que fue minteado el tokenURI CHILA
 
 ![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ddbe9248-b8ef-4f73-ad9d-5c5940f5244f)
 
-
+### Marketplace
 
 
 
