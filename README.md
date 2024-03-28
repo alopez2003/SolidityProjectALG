@@ -400,7 +400,9 @@ Desde luego que de muchas formas, de inicio, tal cual como la fase 2, no existe 
 
 _Fin de la Fase 3._
 
+## Fase 4.
 
+Aún estoy en investigación de cómo poder pagar con la moneda CHIL el NFT desarrollado y promocionado en el Marketplace, ya pude ver que es posible llamar el contrato ico.sol dentro del contrato Marketplace.ico, ahora estoy viendo como integrar esto en el código para que pueda ser pagado de esta forma.
 
 
 
