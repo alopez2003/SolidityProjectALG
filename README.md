@@ -404,7 +404,36 @@ _Fin de la Fase 3._
 
 Aún estoy en investigación de cómo poder pagar con la moneda CHIL el NFT desarrollado y promocionado en el Marketplace, ya pude ver que es posible llamar el contrato ico.sol dentro del contrato Marketplace.ico, ahora estoy viendo como integrar esto en el código para que pueda ser pagado de esta forma.
 
+Update, en verdad estuve intentando revisar como integrar el ERC20 dentro del ERC721, sin embargo no tuve éxito, el código que me compila lo subo en la carpeta Fase 4.
 
+Lo realizado hasta ahora es:
+
+- Mandar llamar el contrato del Initial Coin Offering (CHIL) desde los imports
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/ec8d8cc8-85a7-4c68-a99c-9c57ddacef5e)
+
+- Realizar nuevas variables para almacenar el contrato del ICO, mismos que serán llamados desde el constructor
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/c5324abf-5f80-42d1-a1a9-a9125a0138ad)
+
+- Mandar llamar en el constructor a este smart contract y asociar los addresses correctos, así como en la declaración inicial ocupar la variable "tokens" para poder manipularla con los precios
+
+![image](https://github.com/alopez2003/SolidityProjectALG/assets/67942268/7c9ef52e-18f5-42de-ad97-ce215e425d05)
+
+
+Mi desconocimiento está en poder llamar la función listItem para usar en vez de la variable items, llamar tokens, el error de compilación me marca en que no puede llamar esto por ERC20, que es una función ERC721, mi problema de desconocimiento está en poder hacer que este NFT, que está en interfase ERC721, pueda ser llamado para ser pagado con la variable tokens, que está en ERC20
+
+Estuve apoyandome de diversos foros, sin embargo no se acoplaban mucho al caso de uso, el que más se acerco fue el github de [NickVanzo.](https://github.com/NickVanzo/Contracts_For_Thesis)
+
+Estuve consultando también los siguientes enlaces:
+[https://github.com/fulldecent/spend-ERC20-create-ERC721](https://github.com/fulldecent/spend-ERC20-create-ERC721)
+[https://ethereum.stackexchange.com/questions/112301/is-this-possible-to-pay-for-erc721-token-with-erc20-token-not-eth](https://ethereum.stackexchange.com/questions/112301/is-this-possible-to-pay-for-erc721-token-with-erc20-token-not-eth)
+
+Entiendo que el objetivo no fue logrado, agradecería un ejemplo de como se hace para complementar mi aprendizaje.
+
+Agradezco de antemano el conocimiento otorgado y gracias por el módulo Alex.
+
+Alberto López Gutiérrez.
 
 
 
